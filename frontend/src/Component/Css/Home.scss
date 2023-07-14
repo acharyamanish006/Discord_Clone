@@ -1,0 +1,13 @@
+@import "src/Scss_Variable.scss";
+
+.homeContainer {
+  background-color: $DISCORD_Black_4;
+  flex: 0.79;
+  .homeWrapper {
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+}

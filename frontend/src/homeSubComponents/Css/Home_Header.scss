@@ -1,0 +1,17 @@
+@import "src/Scss_Variable.scss";
+
+.homeHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $DISCORD_Black_2;
+  height: 7%;
+  padding: 0 1rem 0 1rem;
+  // margin-top: 1rem;
+  .homeHeaderFeatures {
+    display: flex;
+    p {
+      padding: 0 1rem 0 1rem;
+    }
+  }
+}

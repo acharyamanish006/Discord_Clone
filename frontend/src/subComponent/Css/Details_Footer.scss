@@ -1,0 +1,49 @@
+@import "src/Scss_Variable.scss";
+
+.detailsFooter {
+  // height: 1rem;
+  // height: min-content;
+  display: flex;
+  justify-content: space-between;
+  background-color: $DISCORD_Black_3;
+  align-items: center;
+  // overflow: hidden;
+  // background-color: red;
+  .detailsFooterAvatar {
+    display: flex;
+    align-items: center;
+    margin-left: 0.5rem;
+    // background-color: yellow;
+  }
+  .detailsFooterUsernameContainer {
+    // height: 0.5rem;
+    margin-left: 0.5rem;
+    // margin-top: 1rem;
+    // display: flex;
+    // flex-direction: column;
+    // flex-wrap: wrap;
+    // background-color: yellowgreen;
+    .detailsFooterUsername {
+      margin: 0;
+      padding: 0.5rem 0 0 0;
+      font-size: 0.75rem;
+      opacity: 0.9;
+      font-weight: 500;
+      // background-color: blue;
+    }
+    .detailsFooterUserId {
+      padding: 0 0 0.75rem 0;
+      margin: 0;
+      opacity: 0.7;
+      font-size: 0.7rem;
+      // background-color: purple;
+    }
+  }
+  .detailsFooterBtns {
+    margin-right: 0.5rem;
+    // background-color: pink;
+    .detailsFooterBtn {
+      margin: 0 0.5rem 0 0.5rem;
+    }
+  }
+}

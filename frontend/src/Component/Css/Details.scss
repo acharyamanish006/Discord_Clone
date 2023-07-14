@@ -1,0 +1,15 @@
+@import "src/Scss_Variable.scss";
+
+.detailsContainer {
+  flex: 0.16;
+  background-color: $DISCORD_Black_2;
+  .detailsWrapper {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    color: white;
+    flex-direction: column;
+    background-color: $DISCORD_Black_4;
+    // position: relative;
+  }
+}

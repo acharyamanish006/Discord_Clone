@@ -1,0 +1,63 @@
+@import "src/Scss_Variable.scss";
+.chatContainer {
+  margin-top: 1rem;
+  //   background-color: greenyellow;
+  //   border-top: 1px solid $DISCORD_Black_2;
+  .chatWrapper {
+    transition: all ease-out 500ms;
+    &:hover {
+      cursor: pointer;
+      background-color: $DISCORD_Black_2;
+    }
+    display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // background-color: gray;
+    .chatUserAvatar {
+      //   background-color: red;
+      padding: 1rem;
+    }
+    .chatDetails {
+      //   margin-top: 1rem;
+      //   background-color: red;
+      //   height: fit-content;
+      //   height: auto;
+      //   display: flex;
+      //   flex-direction: column;
+      //   justify-content: center;
+      //   align-items: center;
+      .chatUserName {
+        width: fit-content;
+        height: 1rem;
+
+        // background-color: aqua;
+        display: flex;
+        // justify-content: space-around;
+        align-items: center;
+        margin-top: 1rem;
+        .chatUserNamePara {
+          //   height: fit-content;
+          font-weight: 600;
+          font-size: 0.8rem;
+          padding: 0 0.45rem 0 0;
+          opacity: 0.9;
+          //   background-color: yellow;
+        }
+        .chatUserIdPara {
+          opacity: 0.6;
+          //   background-color: greenyellow;
+          font-size: 0.7rem;
+        }
+      }
+      .chatMessage {
+        // background-color: bisque;
+        // font-size: 0.8rem;
+        p {
+          opacity: 0.9;
+          margin-bottom: 1rem;
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}

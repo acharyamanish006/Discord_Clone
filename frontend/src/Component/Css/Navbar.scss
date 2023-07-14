@@ -1,0 +1,20 @@
+@import "src/Scss_Variable.scss";
+
+.navContainer {
+  flex: 0.05;
+  background-color: $DISCORD_Black_4;
+  height: 100vh;
+  .navWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .navDirectMessage {
+      padding: 0.5rem 0 0.5rem 0;
+      margin: 0 0 0.75rem 0;
+      border-bottom: 1px solid rgba(230, 227, 227, 0.362);
+    }
+    .navContent {
+      padding: 0.5rem;
+    }
+  }
+}

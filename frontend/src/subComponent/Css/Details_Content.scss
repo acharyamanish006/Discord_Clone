@@ -1,0 +1,85 @@
+@import "src/Scss_Variable.scss";
+
+.detailsContent {
+  background-color: $DISCORD_Black_2;
+  margin-top: 1px;
+  height: 85%;
+  border-top-left-radius: 0.15rem;
+  .detailsTextChannel {
+    .detailsTextChannelHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 0.7rem 0 0.7rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      // opacity: 0.9;
+      color: rgb(176, 176, 176);
+      .detailsTextChannelPara {
+        display: flex;
+        align-items: center;
+        .textChannelMoreBtn {
+          font-size: 0.65rem;
+          margin-right: 0.25rem;
+          opacity: 0.7;
+        }
+      }
+      .detailsTextChannelPlusIcon {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    .detailsTextChannelGroup {
+      margin: 0 0.7rem 0 0.7rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      // opacity: 0.9;
+      color: rgb(176, 176, 176);
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      p {
+        padding-left: 0.35rem;
+      }
+    }
+  }
+  .detailsVoiceChannel {
+    .detailsVoiceChannelHeader {
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: rgb(176, 176, 176);
+      margin: 0 0.7rem 0 0.7rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .detailsVoiceChannelPara {
+        display: flex;
+        align-items: center;
+        .voiceChannelMoreBtn {
+          font-size: 0.65rem;
+          margin-right: 0.25rem;
+          opacity: 0.7;
+        }
+      }
+      .detailsVoiceChannelPlusIcon {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    .detailsVoiceChannelGroup {
+      margin: 0 0.7rem 0 0.7rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      // opacity: 0.9;
+      color: rgb(176, 176, 176);
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      p {
+        padding-left: 0.35rem;
+      }
+    }
+  }
+}
