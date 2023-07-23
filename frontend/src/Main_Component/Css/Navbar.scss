@@ -1,7 +1,7 @@
 @import "src/Scss_Variable.scss";
 
 .navContainer {
-  flex: 0.05;
+  flex: 0.1;
   background-color: $DISCORD_Black_4;
   height: 100vh;
   .navWrapper {
@@ -14,7 +14,15 @@
       border-bottom: 1px solid rgba(230, 227, 227, 0.362);
     }
     .navContent {
+      cursor: pointer;
+      // border: 1px solid white;
       padding: 0.5rem;
     }
+  }
+}
+@media only screen and (max-width: $MAX_Width) {
+  .navContainer {
+    flex: 0.05 !important;
+    // background-color: red !important;
   }
 }

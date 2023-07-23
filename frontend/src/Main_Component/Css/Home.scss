@@ -1,0 +1,25 @@
+@import "src/Scss_Variable.scss";
+
+.homeContainer {
+  background-color: $DISCORD_Black_4;
+  // flex: 0.79;
+  flex: auto;
+  .homeWrapper {
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+}
+@media only screen and (max-width: $MAX_Width) {
+  .homeContainer {
+    // flex: 0.03 !important;
+    display: none;
+  }
+  .homeActive {
+    display: block !important;
+    flex: auto !important;
+    // background-color: yellow !important;
+  }
+}

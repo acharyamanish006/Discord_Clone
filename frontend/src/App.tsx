@@ -1,7 +1,7 @@
-import { Home } from "./Component/Home";
-import { Navbar } from "./Component/Navbar";
+import { Home } from "./Main_Component/Home";
+import { Navbar } from "./Main_Component/Navbar";
 import "./App.scss";
-import { Details } from "./Component/Details";
+import { Details } from "./Main_Component/Details";
 import "@fontsource/poppins";
 import "@fontsource/poppins/500.css";
 
