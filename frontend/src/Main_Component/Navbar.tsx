@@ -1,10 +1,12 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { Avatar } from "@mui/material";
 import "./Css/Navbar.scss";
 import { useContext } from "react";
 import { Basic_Function } from "../Context/Basic_Functionality";
 
 export const Navbar = () => {
-  const { hideDetailsComponent } = useContext(Basic_Function);
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+  const { hideDetailsComponent }: any = useContext(Basic_Function);
   return (
     <div className="navContainer">
       <div className="navWrapper">

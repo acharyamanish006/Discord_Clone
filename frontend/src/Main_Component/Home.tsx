@@ -6,7 +6,8 @@ import { Basic_Function } from "../Context/Basic_Functionality";
 import { useContext } from "react";
 
 export const Home = () => {
-  const { active } = useContext(Basic_Function);
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+  const { active }: any = useContext(Basic_Function);
   return (
     <div className={active ? "homeContainer" : "homeContainer homeActive"}>
       <div className="homeWrapper">

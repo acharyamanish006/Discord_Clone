@@ -23,4 +23,5 @@ const ContextProvider = ({ children }) => {
   );
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export { ContextProvider, Basic_Function };
