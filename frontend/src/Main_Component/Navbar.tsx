@@ -3,6 +3,8 @@ import { Avatar } from "@mui/material";
 import "./Css/Navbar.scss";
 import { useContext } from "react";
 import { Basic_Function } from "../Context/Basic_Functionality";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 export const Navbar = () => {
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
@@ -14,13 +16,11 @@ export const Navbar = () => {
           <Avatar sx={{ bgcolor: "#7289da" }} />
         </div>
         <div className="navContent">
-          <Avatar sx={{ bgcolor: "#7289da" }} />
+          <Avatar sx={{ bgcolor: "#fffff" }} />
         </div>
-        <div className="navContent">
-          <Avatar sx={{ bgcolor: "#7289da" }} />
-        </div>
-        <div className="navContent">
-          <Avatar sx={{ bgcolor: "#7289da" }} />
+        {/* <Avatar sx={{ bgcolor: "#7289da" }} /> */}
+        <div className="addServer">
+          <FontAwesomeIcon icon={faPlus} />{" "}
         </div>
       </div>
     </div>

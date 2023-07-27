@@ -16,7 +16,28 @@
     .navContent {
       cursor: pointer;
       // border: 1px solid white;
+      transition: all ease-in-out 300ms;
       padding: 0.5rem;
+      &:hover {
+        border-radius: 1rem;
+        // color: white;
+        background-color: $DISCORD_Black_1;
+      }
+      margin-top: 0.4rem;
+      margin-bottom: 0.5rem;
+    }
+    .addServer {
+      cursor: pointer;
+      background-color: $DISCORD_Black_1;
+      border-radius: round($number: 100%);
+      padding: 0.7rem 1rem 0.7rem 1rem;
+      transition: all ease-in-out 300ms;
+      color: #0a8d20;
+      &:hover {
+        border-radius: 1rem;
+        color: white;
+        background-color: #0a8d20;
+      }
     }
   }
 }
