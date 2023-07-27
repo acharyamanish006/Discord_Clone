@@ -13,24 +13,8 @@ const Group_Schema = new mongoose.Schema({
   createdBy: { type: mongoose.Schema.Types.ObjectId, ref: "User" }, //user id which is creating the group
   textChannel: [
     {
-      channelId: {
-        type: String,
-        unique: [true, "channel already exists"],
-        chat: [
-          {
-            message: {
-              content: {
-                type: String,
-              },
-              senderName: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
-              timestamp: {
-                type: Date,
-                default: Date.now(),
-              },
-            },
-          },
-        ],
-      },
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Channel",
     },
   ],
   createdAt: {
