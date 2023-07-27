@@ -16,6 +16,14 @@ const Message_Schema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "Group",
   },
+  channel: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Channel",
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now(),
+  },
 });
 
-module.exports = mongoose.model("Chat", Message_Schema);
+module.exports = mongoose.model("Message", Message_Schema);

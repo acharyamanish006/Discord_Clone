@@ -12,6 +12,10 @@ const User_Schema = new mongoose.Schema({
       default: "No Group",
     },
   ],
+  createdAt: {
+    type: Date,
+    default: Date.now(),
+  },
 });
 
 module.exports = mongoose.model("User", User_Schema);

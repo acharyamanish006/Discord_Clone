@@ -25,7 +25,7 @@ const create_NewGroup = async (req, res) => {
     });
   }
 };
-const delete_Group = (req, res) => {
+const delete_Group = async (req, res) => {
   try {
   } catch (error) {
     res.json({
@@ -34,16 +34,7 @@ const delete_Group = (req, res) => {
     });
   }
 };
-const create_NewChannel = (req, res) => {
-  try {
-  } catch (error) {
-    res.json({
-      success: false,
-      message: error.message,
-    });
-  }
-};
-const delete_Channel = (req, res) => {
+const fetch_Group = async (req, res) => {
   try {
   } catch (error) {
     res.json({
@@ -56,6 +47,5 @@ const delete_Channel = (req, res) => {
 module.exports = {
   create_NewGroup,
   delete_Group,
-  create_NewChannel,
-  delete_Channel,
+  fetch_Group,
 };

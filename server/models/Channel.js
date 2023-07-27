@@ -11,6 +11,10 @@ const Channel_Schema = new mongoose.Schema({
       ref: "Message",
     },
   ],
+  createdAt: {
+    type: Date,
+    default: Date.now(),
+  },
 });
 
 module.exports = mongoose.model("Channel", Channel_Schema);
