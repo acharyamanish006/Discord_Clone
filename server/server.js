@@ -2,6 +2,10 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const router = require("./router/router");
+const userRouter = require("./router/userRouter");
+const groupRouter = require("./router/groupRouter");
+const channelRouter = require("./router/channelRouter");
+const messageRouter = require("./router/messageRouter");
 const PORT = 5000;
 const Connect_DB = require("./config/connectDB");
 
@@ -18,6 +22,10 @@ app.use(
 
 // Routes here...
 app.use("/api/v1", router);
+app.use("/api/user", userRouter);
+app.use("/api/group", groupRouter);
+app.use("/api/channel", channelRouter);
+app.use("/api/message", messageRouter);
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
