@@ -4,8 +4,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Details_TextChannel from "./Details_TextChannel";
 import Details_VoiceChannel from "./Details_VoiceChannel";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons/faAngleDown";
+import { Api_Context } from "../Context/Api_Contex";
+import { useContext } from "react";
 
 export const Details_Content = () => {
+  const { createChannel }: any = useContext(Api_Context);
+
+  const createTextChannel = () => {
+    createChannel();
+  };
   return (
     <div className="detailsContent">
       <div className="detailsTextChannel">
@@ -20,6 +27,7 @@ export const Details_Content = () => {
           <FontAwesomeIcon
             icon={faPlus}
             className="detailsTextChannelPlusIcon"
+            onClick={createTextChannel}
           />
         </div>
         <Details_TextChannel name="general" />

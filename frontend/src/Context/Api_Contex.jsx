@@ -5,11 +5,21 @@ const Api_Context = createContext();
 
 const ApiContextProvider = ({ children }) => {
   const createGroup = async () => {
-    await axios.post("http://localhost/5000", {
-      name: "hey",
-    });
+    console.log("create group");
   };
-  return <Api_Context.Provider>{children}</Api_Context.Provider>;
+  const createChannel = async () => {
+    console.log("create channel");
+  };
+  return (
+    <Api_Context.Provider
+      value={{
+        createGroup,
+        createChannel,
+      }}
+    >
+      {children}
+    </Api_Context.Provider>
+  );
 };
 
 // eslint-disable-next-line react-refresh/only-export-components
