@@ -8,13 +8,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 export const Navbar = () => {
-  const { createGroup }: any = useContext(Api_Context);
+  const { createGroup } = useContext(Api_Context);
 
   const createServer = () => {
     createGroup();
   };
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-  const { hideDetailsComponent }: any = useContext(Basic_Function);
+  const { hideDetailsComponent } = useContext(Basic_Function);
   return (
     <div className="navContainer">
       <div className="navWrapper">

@@ -10,20 +10,20 @@ export default function SignUp() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const myUserName = (e) => {
+  const myUserName = (e: React.ChangeEvent<HTMLInputElement>) => {
     setName(e.target.value);
     // console.log(name);
   };
-  const myEmail = (e) => {
+  const myEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
     // console.log(email);
   };
-  const myPassword = (e) => {
+  const myPassword = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(e.target.value);
     // console.log(password);
   };
 
-  const CreateNewAccount = async () => {
+  const CreateNewAccount = () => {
     if (name) {
       console.log(name);
       if (email) {
