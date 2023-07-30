@@ -1,6 +1,6 @@
 import "./css/LogIn.scss";
 import { Link } from "react-router-dom";
-import { useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import { LogIn_Context } from "../Context/LogIn_Context";
 
 export default function LogIn() {
@@ -8,11 +8,11 @@ export default function LogIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const myEmail = (e) => {
+  const myEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
     // console.log(email);
   };
-  const myPassword = (e) => {
+  const myPassword = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(e.target.value);
     // console.log(password);
   };

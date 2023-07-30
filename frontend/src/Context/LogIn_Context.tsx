@@ -1,5 +1,5 @@
 import axios from "axios";
-import { createContext, FC } from "react";
+import React, { createContext, FC } from "react";
 
 interface AuthContextType {
   LogIn: () => void;
@@ -7,10 +7,20 @@ interface AuthContextType {
   SignUp: () => void;
 }
 
+type LoginTypes = {
+  email?: string | undefined;
+  password: string;
+};
+type SignUpTypes = {
+  name: string;
+  email?: string | undefined;
+  password: string;
+};
+
 const LogIn_Context = createContext<AuthContextType>({} as AuthContextType);
 
 const LogInContextProvider: FC = ({ children }) => {
-  const LogIn = ({ email, password }) => {
+  const LogIn = ({ email, password }: LoginTypes) => {
     console.log("LogIn");
     // Add your login implementation here
     console.log(email);
@@ -33,7 +43,7 @@ const LogInContextProvider: FC = ({ children }) => {
     // Add your logout implementation here
   };
 
-  const SignUp = ({ name, email, password }) => {
+  const SignUp = ({ name, email, password }: SignUpTypes) => {
     console.log("SignUp");
     console.log(name);
     // Add your sign-up implementation here
