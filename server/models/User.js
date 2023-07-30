@@ -5,6 +5,18 @@ const User_Schema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  email: {
+    type: String,
+    unique: true,
+    lowercase: true,
+    required: true,
+  },
+  password: {
+    type: String,
+    minlength: [6, "Password should be at least six characters long"],
+    maxlength: [1024],
+    required: true,
+  },
   group: [
     {
       type: mongoose.Schema.Types.ObjectId,

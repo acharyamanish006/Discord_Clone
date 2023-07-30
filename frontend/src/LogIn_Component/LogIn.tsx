@@ -1,7 +1,38 @@
 import "./css/LogIn.scss";
 import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { LogIn_Context } from "../Context/LogIn_Context";
 
 export default function LogIn() {
+  const { LogIn } = useContext(LogIn_Context);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const myEmail = (e) => {
+    setEmail(e.target.value);
+    // console.log(email);
+  };
+  const myPassword = (e) => {
+    setPassword(e.target.value);
+    // console.log(password);
+  };
+
+  const Login = () => {
+    if (email) {
+      console.log(email);
+
+      if (password) {
+        console.log(password);
+        LogIn({ email, password });
+      }
+    } else {
+      alert("fill all field");
+    }
+    // setEmail("");
+    // setName("");
+    // setPassword("");
+  };
+
   return (
     <div className="mainContainer">
       <div className="position">
@@ -25,6 +56,8 @@ export default function LogIn() {
                     className="form-style"
                     id="logemail"
                     autoComplete="off"
+                    value={email}
+                    onChange={myEmail}
                   />
                   <i className="input-icon uil uil-at"></i>
                 </div>
@@ -40,6 +73,8 @@ export default function LogIn() {
                     className="form-style"
                     id="logpass"
                     autoComplete="on"
+                    value={password}
+                    onChange={myPassword}
                   />
                   <i className="input-icon uil uil-lock-alt"></i>
                 </div>
@@ -49,7 +84,7 @@ export default function LogIn() {
                   <a className="link">Create new Account</a>
                 </Link>
               </div>
-              <div className="btn-position">
+              <div className="btn-position" onClick={Login}>
                 <a className="btn">login</a>
               </div>
             </div>

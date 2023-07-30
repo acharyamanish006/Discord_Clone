@@ -1,7 +1,47 @@
 import "./css/SignUp.scss";
 import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { LogIn_Context } from "../Context/LogIn_Context";
 
 export default function SignUp() {
+  // const [showPassword, setShowPassword] = useState(false);
+  const { SignUp } = useContext(LogIn_Context);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const myUserName = (e) => {
+    setName(e.target.value);
+    // console.log(name);
+  };
+  const myEmail = (e) => {
+    setEmail(e.target.value);
+    // console.log(email);
+  };
+  const myPassword = (e) => {
+    setPassword(e.target.value);
+    // console.log(password);
+  };
+
+  const CreateNewAccount = async () => {
+    if (name) {
+      console.log(name);
+      if (email) {
+        console.log(email);
+
+        if (password) {
+          console.log(password);
+          SignUp({ name, email, password });
+        }
+      }
+    } else {
+      alert("fill all field");
+    }
+    // setEmail("");
+    // setName("");
+    // setPassword("");
+  };
+
   return (
     <div className="mainContainer">
       <div className="position">
@@ -23,6 +63,8 @@ export default function SignUp() {
                     name="logemail"
                     className="form-style"
                     id="logemail"
+                    value={name}
+                    onChange={myUserName}
                   />
                   <i className="input-icon uil uil-at"></i>
                 </div>
@@ -38,6 +80,8 @@ export default function SignUp() {
                     className="form-style"
                     id="logemail"
                     autoComplete="off"
+                    value={email}
+                    onChange={myEmail}
                   />
                   <i className="input-icon uil uil-at"></i>
                 </div>
@@ -53,6 +97,8 @@ export default function SignUp() {
                     className="form-style"
                     id="logpass"
                     autoComplete="on"
+                    value={password}
+                    onChange={myPassword}
                   />
                   <i className="input-icon uil uil-lock-alt"></i>
                 </div>
@@ -62,7 +108,7 @@ export default function SignUp() {
                   <a className="link">Already have an Account</a>
                 </Link>
               </div>
-              <div className="btn-position">
+              <div className="btn-position" onClick={CreateNewAccount}>
                 <a className="btn">signup</a>
               </div>
             </div>

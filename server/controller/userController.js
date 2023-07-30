@@ -47,7 +47,8 @@ const sign_in = async (req, res) => {
 
 const sign_up = async (req, res) => {
   try {
-    const { name, email, password, avatar } = req.body;
+    const { name, email, password } = req.body;
+    console.log(req.body.name);
     // console.log(name, email, password);
     if ((name || email || password) == "") {
       return res.json({
@@ -66,8 +67,8 @@ const sign_up = async (req, res) => {
     new_user = await User.create({
       name,
       email,
+      // password,
       password: hash_password,
-      avatar: avatar,
     });
     //sending cookie
     let token = jwt.sign(
@@ -80,12 +81,14 @@ const sign_up = async (req, res) => {
       expire: new Date(Date.now() + 90 * 24 * 60 * 60 * 1000),
       httpOnly: true,
     };
+    console.log(new_user);
     return res.cookie("token", token, token_option).json({
       success: true,
       message: "Your Signed Up",
       new_user,
     });
   } catch (err) {
+    // console.log(err);
     return res.json({
       success: false,
       message: err.message,
