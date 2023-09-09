@@ -21,6 +21,7 @@ Router.route("/delete/:id/group").put(delete_Group); // deletes group
 
 //channels
 Router.route("/group/:groupId/new/channel").post(create_Channel);
+Router.route("/groups/channel").get(fetch_Channel);
 Router.route("/group/:groupId/delete/:id/channel").put(delete_Channel); //deletes channel
 
 module.exports = Router;

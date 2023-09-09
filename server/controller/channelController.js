@@ -4,20 +4,25 @@ const Channel = require("../models/Channel");
 
 const create_Channel = async (req, res) => {
   try {
-    const { name } = req.body;
+    const { channelName } = req.body;
+    console.log("The channel name is", channelName);
     console.log(req.params.groupId);
     const userId = "64c16885f462f32ec69924c9";
-    const groupId = "64c23f2ec60d33fc5e597e2c";
+    // const groupId = "64c23f2ec60d33fc5e597e2c";
     const newChannel = await Channel.create({
-      channelId: name,
+      channelId: channelName,
+      channelName,
     });
+    console.log(newChannel);
     // check if user exists in db or not
-    const group = await Group.findById(groupId);
-    const { textChannel } = group;
-    textChannel.push(newChannel._id);
-    group.save();
+    // const group = await Group.findById(groupId);
+    // console.log(group);
+    // const { textChannel } = group;
+    // textChannel.push(newChannel._id);
+    // group.save();
     res.json({
-      group,
+      success: true,
+      channel: newChannel,
     });
   } catch (error) {
     res.json({
@@ -37,6 +42,11 @@ const delete_Channel = async (req, res) => {
 };
 const fetch_Channel = async (req, res) => {
   try {
+    const data = await Channel.find();
+    console.log(data);
+    res.json({
+      data,
+    });
   } catch (error) {
     res.json({
       success: false,
