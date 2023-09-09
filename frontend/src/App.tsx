@@ -12,7 +12,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 function App() {
   const [isAuth, setIsAuth] = useState(true);
 
-  if (isAuth) {
+  if (!isAuth) {
     return (
       <BrowserRouter>
         <Routes>

@@ -1,6 +1,9 @@
 const mongoose = require("mongoose");
 
 const Channel_Schema = new mongoose.Schema({
+  channelName: {
+    type: String,
+  },
   channelId: {
     type: String,
     unique: [true, "channel already exists"],

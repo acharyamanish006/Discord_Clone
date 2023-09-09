@@ -5,10 +5,25 @@ import Details_TextChannel from "./Details_TextChannel";
 import Details_VoiceChannel from "./Details_VoiceChannel";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons/faAngleDown";
 import { Api_Context } from "../Context/Api_Contex";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 
 export const Details_Content = () => {
-  const { createChannel }: any = useContext(Api_Context);
+  const { createChannel } = useContext(Api_Context);
+  const [textChannel, setTextChannel] = useState([]);
+
+  useEffect(() => {
+    console.log("details content");
+    async function getChannels() {
+      const res = await fetch("http://localhost:5000/api/v1/groups/channel");
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+      const { data } = await res.json();
+      console.log(data)
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+      setTextChannel(data)
+
+    }
+    void getChannels()
+  }, [])
 
   const createTextChannel = () => {
     createChannel();
@@ -30,6 +45,13 @@ export const Details_Content = () => {
             onClick={createTextChannel}
           />
         </div>
+        {
+          textChannel && textChannel.length > 0 && textChannel.map((channel: any) => {
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
+            return <Details_TextChannel name={channel.channelId} />
+
+          })
+        }
         <Details_TextChannel name="general" />
         <Details_TextChannel name="in game" />
         <Details_TextChannel name="memes" />
