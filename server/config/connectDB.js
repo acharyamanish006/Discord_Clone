@@ -1,9 +1,13 @@
 const mongoose = require("mongoose");
-const URL = "mongodb://127.0.0.1:27017/DISCORD";
+// const URL = "mongodb://127.0.0.1:27017/DISCORD";
+// const URL = "mongodb://localhost:27017/DISCORD";
 
 const Connect_DB = () => {
   mongoose
-    .connect(URL)
+    .connect(process.env.DB_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    })
     .then(() => {
       console.log("connected to database");
     })

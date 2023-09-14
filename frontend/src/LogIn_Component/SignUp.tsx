@@ -104,8 +104,8 @@ export default function SignUp() {
                 </div>
               </div>
               <div className="password-container">
-                <Link to={"/login"}>
-                  <a className="link">Already have an Account</a>
+                <Link to={"/login"} className="link">
+                  Already have an Account
                 </Link>
               </div>
               <div className="btn-position" onClick={CreateNewAccount}>

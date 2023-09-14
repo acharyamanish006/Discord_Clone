@@ -80,8 +80,8 @@ export default function LogIn() {
                 </div>
               </div>
               <div className="password-container">
-                <Link to={"/signup"}>
-                  <a className="link">Create new Account</a>
+                <Link to={"/signup"} className="link">
+                  Create new Account
                 </Link>
               </div>
               <div className="btn-position" onClick={Login}>
