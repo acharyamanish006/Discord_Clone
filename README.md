@@ -1,5 +1,7 @@
 # Discord Clone Project
 
+![Screenshot from 2023-10-28 12-36-16](https://github.com/acharyamanish006/Discord_Clone/assets/100832817/210c6e9a-3e79-4bc4-9459-b74127ee9069)
+
 
 A clone of the popular chat and communication platform, Discord. This project aims to replicate the core features of Discord for learning and development purposes.
 
